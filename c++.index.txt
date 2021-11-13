@@ -1,0 +1,99 @@
+#include <iostream>
+using namespace std ;
+
+void Example1(int firstData ,char option , int BestNumber,int NewNumber)
+{
+	cout << "-----------------\n";
+	cout << "-----------------\n";
+}
+
+void PrintMessage(string message1 = "hi world ! how are you" , int numberOfStras = 10)
+{
+	cout << "******************\n";
+	cout << message1 << "\n";
+	cout << "******************\n";
+}
+
+float Addition(float number1 , float number2)
+{
+	float sum = number1 + number2 ;
+	return sum ;
+}
+
+float Subtraction(float number1 , float number2)
+{
+	float SubtractVar = number1 - number2 ;
+	return SubtractVar ;
+}
+
+float Multiplication(float number1 ,float number2)
+{
+	float multiplication = number1 * number2 ;
+	return multiplication  ;
+}
+
+float Divition(float number1 , float number2)
+{
+	float divition = number1 / number2 ;
+	return divition ;
+}
+float Calculator(float firstNumber , float secondNumber ,char Operator)
+{
+	float result = 0 ;
+	switch(Operator)
+	{
+	case'+':
+		result = firstNumber + secondNumber ;
+		cout << result ;
+		break ;
+	case'-':
+		result = firstNumber - secondNumber ;
+		cout << result ;
+		break ;
+	case'*' :
+		result = firstNumber * secondNumber ;
+		cout << result ;
+		break ;
+	case'/' :
+		result = firstNumber / secondNumber ;
+		cout << result ;
+		break ;
+	default :
+		cout << "result is invalid";
+		break ;
+	}
+	return result ;
+}
+
+void Diffrence(float & number1 , float & number2)
+{
+	number1 = -number2 ;
+}
+int Diffrence(float & number1 , float & number2 , float & number3)
+{
+    number1 = -number2 ;
+}
+
+int main()
+{
+	string myUserMessage = "hi this is the first try";
+	int x = 50 ;
+	Example1(20,'g',x,47);
+	PrintMessage();
+	PrintMessage("welcome to calculator program");
+	PrintMessage("please entre the first value");
+	float FirstValue = 0 , SecondValue = 0 ;
+	cin >> FirstValue ;
+	PrintMessage("please entre the second value");
+	cin >> SecondValue ;
+	
+	PrintMessage("please entre the operator");
+	char Operator = 'A';
+	cin >> Operator ;
+	
+	//Diffrence(FirstValue , SecondValue);
+	cout << "this is first number \n " << FirstValue << "\n" ;
+	
+	float result = Calculator(FirstValue , SecondValue ,Operator );
+	cout << result ;
+}
